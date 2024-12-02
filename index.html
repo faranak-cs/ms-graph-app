@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <script type="module">
+      import {
+        registerMgtComponents,
+        Providers,
+        Msal2Provider,
+      } from "https://unpkg.com/@microsoft/mgt@4";
+
+      Providers.globalProvider = new Msal2Provider({
+        clientId: "application-id-here",
+        authority:
+          "https://login.microsoftonline.com/5f03ee3c-aba2-4bce-9d15-634403c9b622",
+      });
+
+      registerMgtComponents();
+    </script>
+  </head>
+
+  <body>
+    <mgt-login></mgt-login>
+  </body>
+</html>
